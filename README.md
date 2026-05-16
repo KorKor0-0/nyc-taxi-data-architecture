@@ -193,16 +193,6 @@ nyc-taxi-pipeline/
 
 ---
 
-## ผลลัพธ์ที่ได้
-
-| เดือน | จำนวน Trip |
-|---|---|
-| January 2024 | 2,869,585 |
-| February 2024 | 2,901,416 |
-| **รวม** | **~5.77 ล้าน rows** |
-
----
-
 ## Data Quality Validation
 
 การตรวจสอบคุณภาพข้อมูลทำผ่าน `dags/helpers/validator.py` โดยใช้ **PyArrow** อ่านไฟล์ Parquet โดยตรงก่อนเข้าสู่ขั้นตอน clean
