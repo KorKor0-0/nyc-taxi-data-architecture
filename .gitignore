@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Airflow
+logs/
+airflow-webserver.pid
+
+# Spark / Hadoop
+metastore_db/
+spark-warehouse/
+
+# Data Files
+data/raw/
+data/processed/
+data/curated/
+data/warehouse/
+
+# Keep folder structure
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/curated/.gitkeep
+!data/warehouse/.gitkeep
+
+# Environment Variables
+.env
+
+# Mac / Windows
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Docker
+postgres_data/
