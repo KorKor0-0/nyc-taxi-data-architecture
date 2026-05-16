@@ -181,17 +181,7 @@ nyc-taxi-pipeline/
 
 ## 🔁 Airflow DAG
 
-```
-ingest_trip_data
-      ↓
-clean_trip_data
-      ↓
-transform_trip_data
-      ↓
-create_star_schema
-      ↓
-load_to_postgres
-```
+![Airflow DAG Workflow](images/airflow-dag-flow.png)
 
 | Task | คำอธิบาย |
 |---|---|
@@ -241,7 +231,7 @@ REQUIRED_COLUMNS = {
 }
 ```
 
-**รัน validator ตรง ๆ:**
+**รัน validator:**
 
 ```bash
 python dags/helpers/validator.py
@@ -287,7 +277,15 @@ FROM fact_trip
 GROUP BY pickup_weekday
 ORDER BY pickup_weekday;
 ```
+หลังจากกระบวนการ ETL เสร็จสิ้น ข้อมูลจะถูกจัดเก็บในรูปแบบ Star Schema บน PostgreSQL ซึ่งพร้อมสำหรับการทำ Business Intelligence (BI) นี่คือตัวอย่างผลลัพธ์การ Query ข้อมูลจริง:
 
+**1. ตรวจสอบจำนวนเที่ยวการเดินทาง (Total Trips) แบ่งตามเดือน**
+แสดงให้เห็นถึงการทำ Incremental Load ที่ข้อมูลของเดือนกุมภาพันธ์ถูกนำมาต่อท้ายเดือนมกราคมได้อย่างสมบูรณ์
+![Check trips by month](images/Check-trips-by-month.png)
+
+**2. สรุปยอดรายได้รวม (Total Revenue) แบ่งตามเดือน**
+ตัวอย่างการดึงข้อมูลรายได้รวมเพื่อนำไปวิเคราะห์แนวโน้มการเติบโตของธุรกิจ
+![Revenue by month](images/Revenue-by-month.png)
 ---
 
 ## วิธีการใช้งาน
