@@ -1,10 +1,6 @@
 # 🚕 NYC Taxi Data Pipeline
 
-ระบบ Data Pipeline สำหรับประมวลผลข้อมูลการเดินทางของ NYC Yellow Taxi แบบ End-to-End โดยใช้ **Apache Spark**, **Apache Airflow** และ **PostgreSQL** ในรูปแบบ Star Schema Data Warehouse เพื่อรองรับการวิเคราะห์ข้อมูลเชิงธุรกิจ
-
----
-
-โปรเจกต์นี้ออกแบบและพัฒนา Data Pipeline แบบ ETL (Extract, Transform, Load) ตั้งแต่ขั้นตอนการดึงข้อมูล ทำความสะอาด แปลงข้อมูล สร้าง Star Schema และโหลดเข้าสู่ PostgreSQL Pipeline ทำงานอัตโนมัติผ่าน Apache Airflow และรองรับการประมวลผลข้อมูลหลายเดือนได้อย่างเป็นระบบ
+ออกแบบและพัฒนา Data Pipeline แบบ End-to-End สำหรับประมวลผลข้อมูลการเดินทางของ NYC Yellow Taxi ด้วยกระบวนการ ETL (Extract, Transform, Load) โดยใช้ Apache Spark ในการทำความสะอาดและแปลงข้อมูลให้อยู่ในรูปแบบ Star Schema Data Warehouse ก่อนโหลดเข้าสู่ PostgreSQL เพื่อรองรับการวิเคราะห์เชิงธุรกิจ ระบบทั้งหมดถูกควบคุมการทำงานอัตโนมัติแบบรายเดือน (Monthly Batch Processing) ผ่าน Apache Airflow
 
 
 ---
