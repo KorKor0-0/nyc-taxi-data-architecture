@@ -350,8 +350,6 @@ POSTGRES_PASSWORD=your_password
 ```
 
 > **หมายเหตุ:** ใช้ `postgres` เป็น host ไม่ใช่ `localhost` เพราะรันใน Docker network
->
-> **อย่าลืม** เพิ่ม `.env` ใน `.gitignore` เพื่อป้องกัน credentials รั่วไหล
 
 ---
 
